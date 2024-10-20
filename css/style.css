@@ -1,0 +1,194 @@
+@font-face {
+    font-family: TT Wellingtons;
+    src: url("../fonts/TT Wellingtons ExtraBold.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ffd749;
+}
+.game {
+    width: 320px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px 14px 0;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-game {
+    display: none;
+    font-family: "TT Wellingtons";
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    color: #444444;
+
+    animation-name: text-game;
+    animation-duration: 1s;
+}
+
+.backpack {
+    background-image: url("../img/рюкзак.png");
+    width: 292px;
+    height: 383px;
+    background-size: cover;
+    position: relative;
+
+}
+
+.retry-button{
+    display: none;
+    text-align: center;
+    background-color: #fff;
+    width: 189px;
+    padding: 12px 13px 11px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    animation-name: retryButton;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+.retry-button a {
+    font-family: "TT Wellingtons";
+    font-style: normal;
+    color: #FFD749;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.readiness {
+    font-family: "TT Wellingtons";
+    color: #444444;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+
+    animation-name: starT;
+    transition-duration: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+
+}
+.readiness span {
+    font-family: "TT Wellingtons";
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+    color: #F8A4A4;
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: 900;
+
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 0%;
+    transform: translateY(20px);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    transition-duration: 2s;
+    animation-fill-mode: backwards  ;
+    animation-delay: 0.5s;
+
+}
+
+.item {
+    margin: 10px;
+    animation-name: fadeInItem;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+    transition-duration: 5s;
+    animation-fill-mode: backwards;
+}
+
+#nintendo {
+    animation-delay: 1s;
+}
+
+#karandash {
+    animation-delay: 1.5s;
+}
+
+#usb {
+    position: relative;
+    bottom: 60px;
+    animation-delay: 2s;
+}
+
+#tetrad {
+    animation-delay: 2.5s;
+    position: relative;
+    bottom: 41px;
+}
+
+#pincil {
+    animation-delay: 3s;
+    position: relative;
+    right: 95px;
+    bottom: 126px;
+}
+
+.backpack {
+    background-image: url('../img/backpack.png');
+    width: 100%;
+    /*height: 347.29px;*/
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.anim-start {
+    transform-origin: top center;
+    animation-name: backpack, starT;
+    transition-duration: 2s;
+    animation-duration: 1.2s, 2s;
+    animation-fill-mode: both;
+}
+
+.backpackAnim {
+    position: relative;
+    animation-name: backpackAnim;
+    animation-duration: 1s;
+    transition-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.task_text {
+    background-image: url('../img/task_text.png');
+    width: 193.14px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 200px;
+    top: 320px;
+
+
+    transition: transform 1s;
+    animation-name: task_text;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+}
